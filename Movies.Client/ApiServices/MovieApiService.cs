@@ -83,7 +83,7 @@ namespace Movies.Client.ApiServices
 
             var httpCLient = _httpClientFactory.CreateClient("MovieAPIClient");
 
-            var request = new HttpRequestMessage(HttpMethod.Get, "/api/movies/");
+            var request = new HttpRequestMessage(HttpMethod.Get, "/movies");
 
             var response = await httpCLient.SendAsync(request, HttpCompletionOption.ResponseHeadersRead)
                                 .ConfigureAwait(false);
